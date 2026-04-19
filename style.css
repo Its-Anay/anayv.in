@@ -187,8 +187,13 @@ ul { list-style: none; }
 }
 
 .btn-outline {
-  margin-left: 16px;
   background: transparent;
+}
+
+.btn-group {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
 .btn:hover {
