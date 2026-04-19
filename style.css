@@ -186,6 +186,11 @@ ul { list-style: none; }
   animation: fadeUp 0.5s ease forwards 1.1s;
 }
 
+.btn-outline {
+  margin-left: 16px;
+  background: transparent;
+}
+
 .btn:hover {
   background: var(--accent-dim);
   transform: translateY(-3px);
