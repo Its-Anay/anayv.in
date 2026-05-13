@@ -1,0 +1,35 @@
+---
+import Base from '../layouts/Base.astro';
+
+const demos: { name: string; description: string; tech: string[]; url: string }[] = [
+  // Add live demo entries here, e.g.:
+  // {
+  //   name: "API Rate Limiter Demo",
+  //   description: "Interactive demo of the rate limiting library.",
+  //   tech: ["Python", "FastAPI", "Valkey"],
+  //   url: "https://demo.anayv.in",
+  // },
+];
+---
+<Base title="Live Projects — Anay Vyawahare">
+  <section class="section" style="max-width:700px">
+    <h2 class="section-title"><span class="section-num">06.</span> Live Projects</h2>
+    {demos.length === 0
+      ? <p class="empty-state">Live demos coming soon.</p>
+      : (
+          <div class="projects-grid">
+            {demos.map(demo => (
+              <div class="project-card">
+                <h3 class="project-name">{demo.name}</h3>
+                <p class="project-desc">{demo.description}</p>
+                <ul class="project-tech">
+                  {demo.tech.map(t => <li>{t}</li>)}
+                </ul>
+                <a href={demo.url} target="_blank" rel="noopener" class="btn" style="margin-top:auto;padding:10px 20px;font-size:0.8rem">Open Demo →</a>
+              </div>
+            ))}
+          </div>
+        )
+    }
+  </section>
+</Base>
